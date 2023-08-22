@@ -18,7 +18,7 @@ describe("Routing testing of components",()=>{
                <MyRoutes></MyRoutes>
             </MemoryRouter>
           );
-      const todo= screen.getByText("Todo example");
+      const todo= screen.getByText(/Todo App/i);
       expect(todo).toBeInTheDocument();
     });
 

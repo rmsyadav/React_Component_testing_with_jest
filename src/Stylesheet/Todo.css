@@ -1,0 +1,17 @@
+.container {
+    width: 50%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.card-text{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list-group-item:hover{
+    background-color: chartreuse;
+}

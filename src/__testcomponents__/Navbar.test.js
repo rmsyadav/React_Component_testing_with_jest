@@ -21,7 +21,7 @@ describe("App component testing:- ",()=>{
       expect(linkElement).toBeInTheDocument();
 
       await user.click(screen.getByTestId('home'));
-      const list= screen.getByText(/Todo example/i);
+      const list= screen.getByText(/Todo App/i);
       expect(list).toBeInTheDocument();
       
     });

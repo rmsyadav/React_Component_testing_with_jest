@@ -8,10 +8,12 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
     className="container-fluid"
   >
     <a
-      className="navbar-brand"
-      href="#"
+      className="text-sucess"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      Navbar
+      Learn React
     </a>
     <button
       aria-controls="navbarSupportedContent"
