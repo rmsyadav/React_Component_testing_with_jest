@@ -65,10 +65,9 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
             className="nav-item"
           >
             <a
-              aria-current="page"
-              className="nav-link active"
+              className="nav-link"
               data-testid="signin"
-              href="/"
+              href="/signin"
               onClick={[Function]}
             >
               SignIn

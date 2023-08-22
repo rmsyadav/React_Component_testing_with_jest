@@ -38,6 +38,18 @@ describe("App component testing:- ",()=>{
         expect(list).toBeInTheDocument();
         
       });
+      test('checking wether redirecting on signin component', async() => {
+        const user = userEvent.setup()
+        render(<BrowserRouter><MyRoutes></MyRoutes></BrowserRouter>);
+  
+        const linkElement = screen.getByTestId('signin');
+        expect(linkElement).toBeInTheDocument();
+  
+        await user.click(linkElement);
+        const signin= screen.getByText(/Please login to your account/i);
+        expect(signin).toBeInTheDocument();
+        
+      });
     
   
   })

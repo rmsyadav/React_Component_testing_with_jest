@@ -26,7 +26,7 @@ const Navbar = ()=>{
                       <NavLink className="nav-link" to={"/list"}  data-testid="list">List</NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" href="#" data-testid="signin">SignIn</NavLink>
+                      <NavLink className="nav-link" to={"/signin"} data-testid="signin">SignIn</NavLink>
                     </li>
                 </ul>
                 </div>
