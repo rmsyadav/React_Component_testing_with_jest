@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: TaskList List component snapshot testing  1`] = `
+Array [
+  <div
+    className="container mt-3"
+  >
+    <h2>
+      Numbered List Group
+    </h2>
+  </div>,
+  <div
+    className="container mt-3"
+  >
+    <ol
+      className="list-group list-group-numbered"
+    />
+  </div>,
+]
+`;
