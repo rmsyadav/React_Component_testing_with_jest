@@ -2,36 +2,47 @@
 
 exports[`App component testing:-  Todo component snapshot testing  1`] = `
 <div
-  class="container"
+  className="container"
+  style={
+    Object {
+      "marginTop": "30px",
+    }
+  }
 >
   <div
-    class="card text-center"
+    className="card text-center"
   >
     <div
-      class="card-header"
+      className="card-header bg-success text-dark fw-bold"
     >
       Todo App
     </div>
     <div
-      class="card-body"
+      className="card-body"
+      style={
+        Object {
+          "height": "400px",
+        }
+      }
     >
       <div
-        class="input-group card-title mb-3"
+        className="input-group card-title mb-3"
       >
         <input
-          class="form-control"
+          className="form-control"
           onChange={[Function]}
           placeholder="Add your new todo"
           type="text"
+          value={Array []}
         />
         <button
-          class="btn btn-outline-secondary"
+          className="btn btn-outline-secondary"
           id="button-addon2"
           onClick={[Function]}
           type="button"
         >
           <i
-            class="bi bi-plus-circle-fill"
+            className="bi bi-plus-circle-fill"
             style={
               Object {
                 "color": "blue",
@@ -41,15 +52,15 @@ exports[`App component testing:-  Todo component snapshot testing  1`] = `
         </button>
       </div>
       <div
-        class="card-text"
+        className="card-text"
       >
         <ul
-          class="list-group list-group-numbered"
+          className="list-group list-group-numbered"
         />
       </div>
     </div>
     <div
-      class="card-footer text-muted"
+      className="card-footer text-light bg-warning"
     >
       Sun Dec 17 2023 03:24:00 GMT+0530 (India Standard Time)
     </div>

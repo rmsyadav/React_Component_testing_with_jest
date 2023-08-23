@@ -8,12 +8,22 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
     className="container-fluid"
   >
     <a
-      className="text-sucess"
+      className="text-primary fw-bold"
       href="https://reactjs.org"
       rel="noopener noreferrer"
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
       target="_blank"
     >
-      Learn React
+      <i
+        className="bi bi-windows"
+      />
+      <strong>
+        Learn React
+      </strong>
     </a>
     <button
       aria-controls="navbarSupportedContent"
@@ -40,11 +50,14 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
         >
           <a
             aria-current="page"
-            className="nav-link active active"
+            className="nav-link active fw-bold active"
             data-testid="home"
             href="/"
             onClick={[Function]}
           >
+            <i
+              className="bi bi-house-door-fill"
+            />
             Home
           </a>
         </li>
@@ -52,11 +65,14 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link fw-bold"
             data-testid="list"
             href="/list"
             onClick={[Function]}
           >
+            <i
+              className="bi bi-list-stars"
+            />
             List
           </a>
         </li>
@@ -64,11 +80,14 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
           className="nav-item"
         >
           <a
-            className="nav-link"
+            className="nav-link fw-bold"
             data-testid="signin"
             href="/signin"
             onClick={[Function]}
           >
+            <i
+              className="bi bi-box-arrow-in-right"
+            />
             SignIn
           </a>
         </li>

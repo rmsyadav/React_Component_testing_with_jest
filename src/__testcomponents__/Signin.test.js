@@ -1,6 +1,6 @@
 import { rest } from 'msw';
 import renderer from 'react-test-renderer';
-import { render, screen } from '@testing-library/react';
+import { render, screen,act } from '@testing-library/react';
 import { setupServer } from 'msw/node';
 import SignIn from '../Components/Signin';
 import { BrowserRouter } from 'react-router-dom';
@@ -43,13 +43,19 @@ describe('Signin component testing', () => {
     const user = userEvent.setup();
      render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
      const textBoxElement = screen.getByTestId("email");
-     await user.type(textBoxElement,'rmsyadav567@gmail.com');
+     await act(async()=>{
+      await user.type(textBoxElement,'rmsyadav567@gmail.com');
+     }) 
      expect(screen.getByTestId('email')).toHaveValue('rmsyadav567@gmail.com');
      const passwordElement = screen.getByTestId("password");
-     await user.type(passwordElement,'rmsyadav@567');
+     await act(async()=>{
+      await user.type(passwordElement,'rmsyadav@567');
+     })
      expect(screen.getByTestId('password')).toHaveValue('rmsyadav@567');
      const submitBtnElement = screen.getByTestId('submitbtn');
-     await user.click(submitBtnElement);
+     await act(async()=>{
+      await user.click(submitBtnElement);
+     }) 
      const displayedSuccessMessage = await screen.findByText("Successfully you have loggedIn!");
      expect(displayedSuccessMessage).toBeInTheDocument(); 
    });
@@ -57,13 +63,19 @@ describe('Signin component testing', () => {
     const user = userEvent.setup();
      render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
      const textBoxElement = screen.getByTestId("email");
-     await user.type(textBoxElement,'rmsyadav789@gmail.com');
+     await act(async()=>{
+      await user.type(textBoxElement,'rmsyadav789@gmail.com');
+     })
      expect(screen.getByTestId('email')).toHaveValue('rmsyadav789@gmail.com');
      const passwordElement = screen.getByTestId("password");
-     await user.type(passwordElement,'rmsyadav@537');
+     await act(async()=>{
+      await user.type(passwordElement,'rmsyadav@537');
+     })
      expect(screen.getByTestId('password')).toHaveValue('rmsyadav@537');
      const submitBtnElement = screen.getByTestId('submitbtn');
-     await user.click(submitBtnElement);
+     await act(async()=>{
+      await user.click(submitBtnElement);
+     }) 
      const displayedSuccessMessage = await screen.findByText("email or password is wrong!");
      expect(displayedSuccessMessage).toBeInTheDocument(); 
    });
@@ -73,17 +85,23 @@ describe('Signin component testing', () => {
     render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
     const buttonElement = screen.getByTestId('switchbtn');
     expect(buttonElement).toBeInTheDocument();
-    await user.click(buttonElement);
+    await act(async()=>{
+      await user.click(buttonElement);
+    })
   });
 
   it('Check validation error message for email!', async () => {
      const user = userEvent.setup();
      render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
      const textBoxElement = screen.getByTestId("email");
-     await user.type(textBoxElement,'rmsyadav789@gmail.com');
+     await act(async()=>{
+      await user.type(textBoxElement,'rmsyadav789@gmail.com');
+     })
      expect(screen.getByTestId('email')).toHaveValue('rmsyadav789@gmail.com');
      const submitBtnElement = screen.getByTestId('submitbtn');
-     await user.click(submitBtnElement);
+     await act(async()=>{
+      await user.click(submitBtnElement);
+     })
      const displayedSuccessMessage = await screen.findByText("Required");
      expect(displayedSuccessMessage).toBeInTheDocument(); 
    });
@@ -91,11 +109,17 @@ describe('Signin component testing', () => {
      const user = userEvent.setup();
      render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
      const textBoxElement = screen.getByTestId("email");
-     await user.type(textBoxElement,'rmsyadav789gmail');
+     await act(async()=>{
+      await user.type(textBoxElement,'rmsyadav789gmail');
+     })
      const passwordElement = screen.getByTestId("password");
-     await user.type(passwordElement,'rmsyadav@537');
+     await act(async()=>{
+      await user.type(passwordElement,'rmsyadav@537');
+     })
      const submitBtnElement = screen.getByTestId('submitbtn');
-     await user.click(submitBtnElement);
+     await act(async()=>{
+      await user.click(submitBtnElement);
+     })
      const displayedSuccessMessage = await screen.findByText("Invalid email address");
      expect(displayedSuccessMessage).toBeInTheDocument(); 
    });
@@ -103,9 +127,13 @@ describe('Signin component testing', () => {
     const user = userEvent.setup();
     render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
      const passwordElement = screen.getByTestId("password");
-     await user.type(passwordElement,'rmsyadav@537');
+     await act(async()=>{
+      await user.type(passwordElement,'rmsyadav@537');
+     })
     const submitBtnElement = screen.getByTestId('submitbtn');
-    await user.click(submitBtnElement);
+    await act(async()=>{
+      await user.click(submitBtnElement);
+     })
     const displayedSuccessMessage = await screen.findByText("Required");
     expect(displayedSuccessMessage).toBeInTheDocument(); 
   });
@@ -113,7 +141,9 @@ describe('Signin component testing', () => {
     const user = userEvent.setup();
     render(<BrowserRouter><SignIn></SignIn></BrowserRouter>);
     const submitBtnElement = screen.getByTestId('submitbtn');
-    await user.click(submitBtnElement);
+    await act(async()=>{
+      await user.click(submitBtnElement);
+     })
     const displayedSuccessMessage = await screen.findAllByText("Required");
     expect(displayedSuccessMessage).toHaveLength(2); 
   });

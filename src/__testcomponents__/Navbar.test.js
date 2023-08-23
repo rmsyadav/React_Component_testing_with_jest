@@ -1,4 +1,4 @@
-import {render,screen} from "@testing-library/react";
+import {render,screen,act} from "@testing-library/react";
 import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event'
 import Navbar from "../Components/RoutesComponents/Navbar";
@@ -19,8 +19,9 @@ describe("App component testing:- ",()=>{
 
       const linkElement = screen.getByTestId('home');
       expect(linkElement).toBeInTheDocument();
-
-      await user.click(screen.getByTestId('home'));
+      await act(async()=>{
+        await user.click(screen.getByTestId('home'));
+      })
       const list= screen.getByText(/Todo App/i);
       expect(list).toBeInTheDocument();
       
@@ -32,8 +33,9 @@ describe("App component testing:- ",()=>{
   
         const linkElement = screen.getByTestId('list');
         expect(linkElement).toBeInTheDocument();
-  
-        await user.click(screen.getByTestId('list'));
+        await act(async()=>{
+          await user.click(screen.getByTestId('list'));
+         })
         const list= screen.getByText(/Numbered List Group/i);
         expect(list).toBeInTheDocument();
         
@@ -41,11 +43,11 @@ describe("App component testing:- ",()=>{
       test('checking wether redirecting on signin component', async() => {
         const user = userEvent.setup()
         render(<BrowserRouter><MyRoutes></MyRoutes></BrowserRouter>);
-  
         const linkElement = screen.getByTestId('signin');
         expect(linkElement).toBeInTheDocument();
-  
-        await user.click(linkElement);
+        await act(async()=>{
+          await user.click(linkElement);
+        })
         const signin= screen.getByText(/Please login to your account/i);
         expect(signin).toBeInTheDocument();
         

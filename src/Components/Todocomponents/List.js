@@ -19,9 +19,25 @@ const List =()=> {
         </div>
         
         <div className="container mt-3">
-        <ol className="list-group list-group-numbered">
+        <ol className="list-group list-group-light">
+               <li className="list-group-item d-flex justify-content-between align-items-center active">
+                    <span className="badge rounded-pill">USERID</span>
+                    <div className="d-flex flex-column justify-content-between align-items-center">
+                      <div className="fw-bold">USERNAME/COMMENTS</div>
+                    </div>
+                    <span className="badge rounded-pill">POSTID</span>
+                </li>
             {comments && comments.map((comment,id)=>{
-                return (<li data-testid="list-group-item" key={id}>{comment.body}</li>)
+                return (
+                <li className="list-group-item d-flex justify-content-between align-items-center" data-testid="list-group-item" key={id}>
+                     <span className="badge rounded-pill text-success">{comment.id}</span>
+                    <div className="d-flex flex-column justify-content-between align-items-center">
+                    <div className="fw-bold">{comment.user.username}</div>
+                    <div className="text-muted">{comment.body}</div>
+                    </div>
+                    <span className="badge rounded-pill text-success">{comment.postId}</span>
+                </li>
+               )
             })}
         </ol>
    </div>

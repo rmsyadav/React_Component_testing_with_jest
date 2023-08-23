@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen ,act} from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event'
 import Todo from '../Components/Todocomponents/Todo';
@@ -26,15 +26,18 @@ describe("App component testing:- ",()=>{
   test('Perform the user action',async()=>{
     const user = userEvent.setup();
     render(<Todo></Todo>);
-    const textBoxElement = screen.getByRole('textbox');
-    await user.type(textBoxElement,'this is todo 1')
-    expect(screen.getByRole('textbox')).toHaveValue('this is todo 1')
-    const buttonElement = screen.getByRole('button');
-    await user.click(buttonElement);
+      const textBoxElement = screen.getByRole('textbox');
+      await act(async()=>{
+        await user.type(textBoxElement,'this is todo 1')
+      })
+      expect(screen.getByRole('textbox')).toHaveValue('this is todo 1')
+      const buttonElement = screen.getByRole('button');
+      await act(async()=>{
+        await user.click(buttonElement)
+      })
     const displayedTasks = await screen.findAllByTestId("list-group-item");
     expect(displayedTasks).toHaveLength(1);
     expect(screen.getByText('this is todo 1')).toBeInTheDocument();
-
     
   })
   

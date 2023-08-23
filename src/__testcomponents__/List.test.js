@@ -1,19 +1,34 @@
  import { rest } from 'msw';
  import renderer from 'react-test-renderer';
-import { render, screen } from '@testing-library/react';
+import { render, screen ,act} from '@testing-library/react';
 import { setupServer } from 'msw/node';
 import List from '../Components/Todocomponents/List';
 const mockTasks = {
   comments:[
-  { id: 0, body: 'Task Zero', completed: false },
-  { id: 1, body: 'Task One', completed: true }
+    {
+      id: 1,
+      body: "This is some awesome thinking!",
+      postId: 100,
+      user: {
+          id: 63,
+          username: "eburras1q"
+      }
+  },
+  {
+      id: 2,
+      body: "What terrific math skills you’re showing!",
+      postId: 27,
+      user: {
+          id: 71,
+          username: "omarsland1y"
+      }
+  },
  ]
 }
 
 const getTasksPath ='https://dummyjson.com/comments';
 
 const tasksHandler = rest.get(getTasksPath, async (req, res, ctx) =>{
-  console.log(mockTasks);
    return  res(ctx.json(mockTasks))
   }  
 );
@@ -36,11 +51,14 @@ describe('Component: TaskList', () => {
 
     it('displays returned tasks on successful fetch', async () => {
       
-      render(<List></List>);
+      
+      await act(()=>{
+        render(<List></List>);
+      })
       const displayedTasks = await screen.findAllByTestId("list-group-item");
       expect(displayedTasks).toHaveLength(2);
-      expect(screen.getByText('Task Zero')).toBeInTheDocument();
-      expect(screen.getByText('Task One')).toBeInTheDocument();
+      expect(screen.getByText('This is some awesome thinking!')).toBeInTheDocument();
+      expect(screen.getByText('What terrific math skills you’re showing!')).toBeInTheDocument();
       
     });
   
