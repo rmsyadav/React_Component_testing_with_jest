@@ -40,6 +40,21 @@ describe("App component testing:- ",()=>{
     expect(screen.getByText('this is todo 1')).toBeInTheDocument();
     
   })
+  test('When I would not fill text in todoField then I will through error!',async()=>{
+    const user = userEvent.setup();
+    render(<Todo></Todo>);
+      const buttonElement = screen.getByRole('button');
+      await act(async()=>{
+        await user.click(buttonElement)
+      })
+    const displayedTasks = await screen.findByTestId("todoError");
+    expect(displayedTasks).toBeInTheDocument();
+    await act(async()=>{
+      await new Promise((r) => setTimeout(r, 3000));
+    })
+    const displayedTasks1 = screen.queryByTestId("todoError");
+    expect(displayedTasks1).not.toBeInTheDocument();
+  })
   
 
 })

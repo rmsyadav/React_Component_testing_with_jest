@@ -128,7 +128,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
             onChange={[Function]}
             placeholder="Add your new todo"
             type="text"
-            value={Array []}
+            value=""
           />
           <button
             className="btn btn-outline-secondary"

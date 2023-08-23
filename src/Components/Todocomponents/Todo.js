@@ -1,18 +1,36 @@
 import { useReducer, useState } from "react";
 import todosReducer from "../../Reducer";
-import "../../Stylesheet/Todo.css"
+import "../../Stylesheet/Todo.css";
+
 const Todo = ()=>{
   const date = new Date('December 17, 2023 03:24:00');;
   const todayDate = date.toString();
-  const [todoText,setTodoText] = useState([]);
+  const [todoText,setTodoText] = useState("");
   const [todosList,dispatch] = useReducer(todosReducer);
+  const [todoWaring,setTodoWaring] = useState(false);
 
-  const AddTodoText = (event)=>{
+  const AddTodoText = (event)=>{ 
    setTodoText(event.target.value);
   }
 
+  const sleep = async (milliseconds) => {
+    await new Promise(resolve => {
+        return setTimeout(()=>{
+            setTodoWaring(false);
+            resolve();
+        }, milliseconds)
+    });
+  };
+
   const addNewTodo = ()=>{
-    dispatch({type:"ADD_NEW_TODO",payload:todoText});
+    if(todoText)
+    {   setTodoWaring(false);
+        dispatch({type:"ADD_NEW_TODO",payload:todoText});
+    }else{
+        setTodoWaring(true);
+        sleep(2000);
+    }
+    
   }
    return(
         <>
@@ -22,6 +40,9 @@ const Todo = ()=>{
                     Todo App
                 </div>
                 <div className="card-body" style={{height:"400px"}}>
+                    {todoWaring && <div className="alert alert-warning card-title" data-testid="todoError">
+                      <strong>Warning!</strong> Please type something in TodoBox field.
+                    </div>}
                     <div className="input-group card-title mb-3">
                         <input type="text" className="form-control" placeholder="Add your new todo" value={todoText} onChange={AddTodoText}/>
                         <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addNewTodo}><i className="bi bi-plus-circle-fill" style={{color: "blue"}}></i></button>
