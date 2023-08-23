@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
+import "../../Stylesheet/Todo.css";
 
 
 const List =()=> {
@@ -20,12 +21,12 @@ const List =()=> {
         
         <div className="container mt-3">
         <ol className="list-group list-group-light">
-               <li className="list-group-item d-flex justify-content-between align-items-center active">
-                    <span className="badge rounded-pill">USERID</span>
+               <li className="list-group-item column-list-text d-flex justify-content-between align-items-center">
+                    <span className="badge rounded-pill text-dark">USERID</span>
                     <div className="d-flex flex-column justify-content-between align-items-center">
-                      <div className="fw-bold">USERNAME/COMMENTS</div>
+                      <div className="fw-bold text-dark">USERNAME/COMMENTS</div>
                     </div>
-                    <span className="badge rounded-pill">POSTID</span>
+                    <span className="badge rounded-pill text-dark">POSTID</span>
                 </li>
             {comments && comments.map((comment,id)=>{
                 return (

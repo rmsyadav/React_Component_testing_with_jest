@@ -40,7 +40,7 @@ describe("App component testing:- ",()=>{
     expect(screen.getByText('this is todo 1')).toBeInTheDocument();
     
   })
-  test('When I would not fill text in todoField then I will through error!',async()=>{
+  test('When I would not fill text in todoField then it will through error!',async()=>{
     const user = userEvent.setup();
     render(<Todo></Todo>);
       const buttonElement = screen.getByRole('button');
@@ -55,7 +55,28 @@ describe("App component testing:- ",()=>{
     const displayedTasks1 = screen.queryByTestId("todoError");
     expect(displayedTasks1).not.toBeInTheDocument();
   })
-  
+  test('Deleting the todo from existing todo',async()=>{
+    const user = userEvent.setup();
+    render(<Todo></Todo>);
+      const textBoxElement = screen.getByRole('textbox');
+      await act(async()=>{
+        await user.type(textBoxElement,'this is todo 1')
+      })
+      expect(screen.getByRole('textbox')).toHaveValue('this is todo 1')
+      const buttonElement = screen.getByRole('button');
+      await act(async()=>{
+        await user.click(buttonElement)
+      })
+    const displayedTasks = await screen.findAllByTestId("list-group-item");
+    expect(displayedTasks).toHaveLength(1);
+    expect(screen.getByText('this is todo 1')).toBeInTheDocument();
+    const deleteBtn = await screen.findByTestId('deleteTodo');
+    await act(async()=>{
+         await user.click(deleteBtn)
+      })
+    const displayedTodo = screen.queryAllByTestId("list-group-item");
+    expect(displayedTodo).toHaveLength(0);
+  })
 
 })
 

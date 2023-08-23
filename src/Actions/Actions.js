@@ -9,7 +9,7 @@ export const addTodoActionCreator = (payload)=>{
 }
 export const removeTodoActionCreator = (payload)=>{
     const removeTodoActionObj ={
-        type:"REMOVE_EXITING_TODO",
+        type:"REMOVE_EXTING_TODO",
         payload:payload,
      } 
    return removeTodoActionObj;

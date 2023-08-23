@@ -12,6 +12,17 @@
     margin-left: auto;
 }
 
+.list-group-item:nth-child(2n+1){
+    background-color: rgb(214, 216, 219);
+    color: black;
+}
 .list-group-item:hover{
     background-color: chartreuse;
+}
+.hoverEffect:hover{
+    background-color:rgb(94, 97, 101);
+}
+
+.column-list-text{
+    background-color: blue;
 }

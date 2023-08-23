@@ -1,5 +1,6 @@
 import { useReducer, useState } from "react";
-import todosReducer from "../../Reducer";
+import todosReducer from "../../Reducer/Reducer";
+import {addTodoActionCreator,removeTodoActionCreator} from '../../Actions/Actions';
 import "../../Stylesheet/Todo.css";
 
 const Todo = ()=>{
@@ -25,12 +26,17 @@ const Todo = ()=>{
   const addNewTodo = ()=>{
     if(todoText)
     {   setTodoWaring(false);
-        dispatch({type:"ADD_NEW_TODO",payload:todoText});
+        dispatch(addTodoActionCreator(todoText));
     }else{
         setTodoWaring(true);
         sleep(2000);
     }
     
+  }
+
+  const deleteTodoFromTodoList = (index)=>{
+    dispatch(removeTodoActionCreator(index));
+
   }
    return(
         <>
@@ -53,7 +59,7 @@ const Todo = ()=>{
                             return(
                                 <li key={index} data-testid="list-group-item" className="list-group-item d-flex justify-content-between align-items-center">
                                     {value}
-                                    <span><i className="bi bi-trash" style={{color: "red"}}></i></span>
+                                    <span><i className="bi bi-trash hoverEffect" data-testid="deleteTodo" style={{color: "red"}} onClick={()=>{deleteTodoFromTodoList(index)}}></i></span>
                                 </li>
                                 )
                         })}

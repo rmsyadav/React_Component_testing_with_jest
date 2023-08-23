@@ -16,10 +16,10 @@ Array [
       className="list-group list-group-light"
     >
       <li
-        className="list-group-item d-flex justify-content-between align-items-center active"
+        className="list-group-item column-list-text d-flex justify-content-between align-items-center"
       >
         <span
-          className="badge rounded-pill"
+          className="badge rounded-pill text-dark"
         >
           USERID
         </span>
@@ -27,13 +27,13 @@ Array [
           className="d-flex flex-column justify-content-between align-items-center"
         >
           <div
-            className="fw-bold"
+            className="fw-bold text-dark"
           >
             USERNAME/COMMENTS
           </div>
         </div>
         <span
-          className="badge rounded-pill"
+          className="badge rounded-pill text-dark"
         >
           POSTID
         </span>
