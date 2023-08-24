@@ -1,69 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component testing:-  Todo component snapshot testing  1`] = `
-<div
-  className="container"
-  style={
-    Object {
-      "marginTop": "30px",
+Array [
+  <section
+    className="container gradient-form rounded-3"
+    style={
+      Object {
+        "backgroundImage": "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')",
+      }
     }
-  }
->
-  <div
-    className="card text-center"
   >
     <div
-      className="card-header bg-success text-dark fw-bold"
-    >
-      Todo App
-    </div>
-    <div
-      className="card-body"
-      style={
-        Object {
-          "height": "400px",
-        }
-      }
+      className="row d-flex justify-content-center align-items-center"
     >
       <div
-        className="input-group card-title mb-3"
+        className="col-xl-8"
+        style={
+          Object {
+            "marginTop": "30px",
+          }
+        }
       >
-        <input
-          className="form-control"
-          onChange={[Function]}
-          placeholder="Add your new todo"
-          type="text"
-          value=""
-        />
-        <button
-          className="btn btn-outline-secondary"
-          id="button-addon2"
-          onClick={[Function]}
-          type="button"
+        <div
+          className="card text-center"
         >
-          <i
-            className="bi bi-plus-circle-fill"
+          <div
+            className="card-header bg-success text-dark fw-bold"
+          >
+            Todo App
+          </div>
+          <div
+            className="card-body"
             style={
               Object {
-                "color": "blue",
+                "height": "400px",
               }
             }
-          />
-        </button>
-      </div>
-      <div
-        className="card-text"
-      >
-        <ul
-          className="list-group list-group-numbered"
-        />
+          >
+            <div
+              className="input-group card-title mb-3"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Add your new todo"
+                type="text"
+                value=""
+              />
+              <button
+                className="btn btn-outline-secondary"
+                id="button-addon2"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="bi bi-plus-circle-fill"
+                  style={
+                    Object {
+                      "color": "blue",
+                    }
+                  }
+                />
+              </button>
+            </div>
+            <div
+              className="card-text"
+            >
+              <ul
+                className="list-group list-group-numbered"
+              />
+            </div>
+          </div>
+          <div
+            className="card-footer text-light bg-warning"
+          >
+            Sun Dec 17 2023 03:24:00 GMT+0530 (India Standard Time)
+          </div>
+        </div>
       </div>
     </div>
+  </section>,
+  <footer
+    className="container-fluid footer-img rounded-2"
+  >
     <div
-      className="card-footer text-light bg-warning"
+      className="text-center footer-fontsize-mobile"
     >
-      Sun Dec 17 2023 03:24:00 GMT+0530 (India Standard Time)
+      © 2023 Copyright:
+      <span
+        className="text-reset fw-bold"
+      >
+         Learning App
+      </span>
     </div>
-  </div>
-</div>
+  </footer>,
+]
 `;

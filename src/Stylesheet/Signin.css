@@ -18,5 +18,22 @@
     .gradient-custom-2 {
     border-top-right-radius: .3rem;
     border-bottom-right-radius: .3rem;
+     }
     }
-    }
+
+    .clipImage{
+        color: transparent;
+        background-image: url('../Assets/SimpleImage.jpg');
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+
+    } 
+    .clipImage2{
+        color: transparent;
+        background-image: url('../Assets/SimpleImage.jpg');
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+
+    }   

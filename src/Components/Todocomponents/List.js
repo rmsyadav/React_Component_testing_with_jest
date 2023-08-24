@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import "../../Stylesheet/Todo.css";
-
+import "../../Stylesheet/Signup.css"
+import Footer from "../CommonComponents/Footer";
 
 const List =()=> {
 
@@ -15,18 +16,17 @@ const List =()=> {
 
   return (
    <>
-    <div className="container mt-3">
+      <section className="container-fluid rounded-3" style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')"}}>
+        <div className="container py-5 gradient-custom-3">
+        <div className="container d-flex justify-content-center align-item-center">
         <h2>Numbered List Group</h2>
-        </div>
-        
-        <div className="container mt-3">
+        </div> 
+        <div className="container1 text-center mt-3">
         <ol className="list-group list-group-light">
                <li className="list-group-item column-list-text d-flex justify-content-between align-items-center">
-                    <span className="badge rounded-pill text-dark">USERID</span>
-                    <div className="d-flex flex-column justify-content-between align-items-center">
-                      <div className="fw-bold text-dark">USERNAME/COMMENTS</div>
-                    </div>
-                    <span className="badge rounded-pill text-dark">POSTID</span>
+                    <span className="badge rounded-pill text-light">USERID</span>
+                    <span className="badge rounded-pill fw-bold text-light">USERNAME/COMMENTS</span>
+                    <span className="badge rounded-pill text-light">POSTID</span>
                 </li>
             {comments && comments.map((comment,id)=>{
                 return (
@@ -41,7 +41,10 @@ const List =()=> {
                )
             })}
         </ol>
-   </div>
+        </div>
+        </div> 
+    </section>
+    <Footer></Footer>  
    </>
   );
 }

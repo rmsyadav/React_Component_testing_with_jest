@@ -1,141 +1,173 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Signin component testing Signin component snapshot testing  1`] = `
-<section
-  className="h-50 gradient-form"
->
-  <div
-    className="container py-5 h-50"
+Array [
+  <section
+    className="container gradient-form rounded-3"
     style={
       Object {
-        "width": "100%",
+        "backgroundImage": "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')",
       }
     }
   >
     <div
-      className="row d-flex justify-content-center align-items-center h-100"
+      className="container py-5"
     >
       <div
-        className="col-xl-10"
+        className="row d-flex justify-content-center align-items-center"
       >
         <div
-          className="card rounded-3 text-black"
+          className="col-xl-10"
         >
           <div
-            className="row g-0"
+            className="card rounded-3 text-black"
           >
             <div
-              className="col-lg-6"
+              className="row g-0"
             >
               <div
-                className="card-body p-md-5 mx-md-4"
+                className="col-lg-6"
               >
                 <div
-                  className="text-center"
+                  className="card-body p-md-5 mx-md-4"
                 >
-                  <img
-                    alt="logo"
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style={
-                      Object {
-                        "width": "185px",
+                  <div
+                    className="text-center"
+                  >
+                    <img
+                      alt="logo"
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                      style={
+                        Object {
+                          "width": "185px",
+                        }
                       }
-                    }
-                  />
-                  <h4
-                    className="mt-1 mb-5 pb-1"
+                    />
+                    <h4
+                      className="mt-1 mb-5 pb-1 clipImage"
+                    >
+                      We are The Lotus Team
+                    </h4>
+                  </div>
+                  <form
+                    onSubmit={[Function]}
                   >
-                    We are The Lotus Team
-                  </h4>
+                    <h5
+                      className="clipImage2 my-3"
+                    >
+                      Please login to your account
+                    </h5>
+                    <div
+                      className="form-outline mb-4 input-group"
+                    >
+                      <span
+                        className="btn btn-outline-secondary form-field-mandatory-icon"
+                      >
+                        <i
+                          className="bi bi-envelope-at-fill"
+                        />
+                      </span>
+                      <input
+                        className="form-control form-control-md"
+                        data-testid="email"
+                        id="email"
+                        name="email"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="email address"
+                        type="email"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      className="form-outline mb-4 input-group"
+                    >
+                      <span
+                        className="btn btn-outline-secondary form-field-mandatory-icon"
+                      >
+                        <i
+                          className="bi bi-shield-lock-fill"
+                        />
+                      </span>
+                      <input
+                        className="form-control form-control-md"
+                        data-testid="password"
+                        id="password"
+                        name="password"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                    </div>
+                    <div
+                      className="text-center pt-1 mb-5 pb-1"
+                    >
+                      <input
+                        className="form-control btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                        data-testid="submitbtn"
+                        type="submit"
+                        value="Login"
+                      />
+                    </div>
+                    <div
+                      className="d-flex align-items-center justify-content-center pb-4"
+                    >
+                      <p
+                        className="mb-0 me-2"
+                      >
+                        Don't have an account?
+                      </p>
+                      <button
+                        className="btn btn-outline-danger"
+                        data-testid="switchbtn"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Create new
+                      </button>
+                    </div>
+                  </form>
                 </div>
-                <form
-                  onSubmit={[Function]}
-                >
-                  <p>
-                    Please login to your account
-                  </p>
-                  <div
-                    className="form-outline mb-4"
-                  >
-                    <input
-                      className="form-control"
-                      data-testid="email"
-                      id="email"
-                      name="email"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="email address"
-                      type="email"
-                      value=""
-                    />
-                  </div>
-                  <div
-                    className="form-outline mb-4"
-                  >
-                    <input
-                      className="form-control"
-                      data-testid="password"
-                      id="password"
-                      name="password"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="Password"
-                      type="password"
-                      value=""
-                    />
-                  </div>
-                  <div
-                    className="text-center pt-1 mb-5 pb-1"
-                  >
-                    <input
-                      className="form-control btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
-                      data-testid="submitbtn"
-                      type="submit"
-                      value="Login"
-                    />
-                  </div>
-                  <div
-                    className="d-flex align-items-center justify-content-center pb-4"
-                  >
-                    <p
-                      className="mb-0 me-2"
-                    >
-                      Don't have an account?
-                    </p>
-                    <button
-                      className="btn btn-outline-danger"
-                      data-testid="switchbtn"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      Create new
-                    </button>
-                  </div>
-                </form>
               </div>
-            </div>
-            <div
-              className="col-lg-6 d-flex align-items-center gradient-custom-2"
-            >
               <div
-                className="text-white px-3 py-4 p-md-5 mx-md-4"
+                className="col-lg-6 d-flex align-items-center gradient-custom-2"
               >
-                <h4
-                  className="mb-4"
+                <div
+                  className="text-white px-3 py-4 p-md-5 mx-md-4"
                 >
-                  We are more than just a company
-                </h4>
-                <p
-                  className="large mb-0"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                  <h4
+                    className="mb-4"
+                  >
+                    We are more than just a company
+                  </h4>
+                  <p
+                    className="large mb-0"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>,
+  <footer
+    className="container-fluid footer-img rounded-2"
+  >
+    <div
+      className="text-center footer-fontsize-mobile"
+    >
+      © 2023 Copyright:
+      <span
+        className="text-reset fw-bold"
+      >
+         Learning App
+      </span>
+    </div>
+  </footer>,
+]
 `;

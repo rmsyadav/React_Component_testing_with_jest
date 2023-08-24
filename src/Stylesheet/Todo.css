@@ -1,4 +1,4 @@
-.container {
+.container1 {
     width: 50%;
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -23,6 +23,13 @@
     background-color:rgb(94, 97, 101);
 }
 
-.column-list-text{
-    background-color: blue;
+.column-list-text span{
+    background-color:saddlebrown;
+    
+}
+@media screen and (max-width:700px){
+    .column-list-text span{
+        font-size: 0.5rem;
+        
+    }
 }

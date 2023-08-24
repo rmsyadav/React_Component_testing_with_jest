@@ -2,7 +2,7 @@
 
 exports[`App component testing:-  Navbar component snapshot testing  1`] = `
 <nav
-  className="navbar navbar-expand-lg navbar-warning bg-warning"
+  className="navbar navbar-expand-lg navbar-warning navbar-img rounded-3"
 >
   <div
     className="container-fluid"
@@ -21,6 +21,7 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
       <i
         className="bi bi-windows"
       />
+       
       <strong>
         Learn React
       </strong>
@@ -90,6 +91,28 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
             />
             SignIn
           </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link fw-bold"
+            data-testid="signup"
+            href="/signup"
+            onClick={[Function]}
+          >
+            <i
+              className="bi bi-r-circle"
+            />
+            Sign Up
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <i
+            className="bi bi-person-circle nav-link fw-bold"
+          />
         </li>
       </ul>
     </div>

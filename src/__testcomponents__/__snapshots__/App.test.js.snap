@@ -3,7 +3,7 @@
 exports[`App component testing:-  List component snapshot testing  1`] = `
 <div>
   <nav
-    className="navbar navbar-expand-lg navbar-warning bg-warning"
+    className="navbar navbar-expand-lg navbar-warning navbar-img rounded-3"
   >
     <div
       className="container-fluid"
@@ -22,6 +22,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
         <i
           className="bi bi-windows"
         />
+         
         <strong>
           Learn React
         </strong>
@@ -92,74 +93,123 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
               SignIn
             </a>
           </li>
+          <li
+            className="nav-item"
+          >
+            <a
+              className="nav-link fw-bold"
+              data-testid="signup"
+              href="/signup"
+              onClick={[Function]}
+            >
+              <i
+                className="bi bi-r-circle"
+              />
+              Sign Up
+            </a>
+          </li>
+          <li
+            className="nav-item"
+          >
+            <i
+              className="bi bi-person-circle nav-link fw-bold"
+            />
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div
-    className="container"
+  <section
+    className="container gradient-form rounded-3"
     style={
       Object {
-        "marginTop": "30px",
+        "backgroundImage": "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')",
       }
     }
   >
     <div
-      className="card text-center"
+      className="row d-flex justify-content-center align-items-center"
     >
       <div
-        className="card-header bg-success text-dark fw-bold"
-      >
-        Todo App
-      </div>
-      <div
-        className="card-body"
+        className="col-xl-8"
         style={
           Object {
-            "height": "400px",
+            "marginTop": "30px",
           }
         }
       >
         <div
-          className="input-group card-title mb-3"
+          className="card text-center"
         >
-          <input
-            className="form-control"
-            onChange={[Function]}
-            placeholder="Add your new todo"
-            type="text"
-            value=""
-          />
-          <button
-            className="btn btn-outline-secondary"
-            id="button-addon2"
-            onClick={[Function]}
-            type="button"
+          <div
+            className="card-header bg-success text-dark fw-bold"
           >
-            <i
-              className="bi bi-plus-circle-fill"
-              style={
-                Object {
-                  "color": "blue",
-                }
+            Todo App
+          </div>
+          <div
+            className="card-body"
+            style={
+              Object {
+                "height": "400px",
               }
-            />
-          </button>
+            }
+          >
+            <div
+              className="input-group card-title mb-3"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Add your new todo"
+                type="text"
+                value=""
+              />
+              <button
+                className="btn btn-outline-secondary"
+                id="button-addon2"
+                onClick={[Function]}
+                type="button"
+              >
+                <i
+                  className="bi bi-plus-circle-fill"
+                  style={
+                    Object {
+                      "color": "blue",
+                    }
+                  }
+                />
+              </button>
+            </div>
+            <div
+              className="card-text"
+            >
+              <ul
+                className="list-group list-group-numbered"
+              />
+            </div>
+          </div>
+          <div
+            className="card-footer text-light bg-warning"
+          >
+            Sun Dec 17 2023 03:24:00 GMT+0530 (India Standard Time)
+          </div>
         </div>
-        <div
-          className="card-text"
-        >
-          <ul
-            className="list-group list-group-numbered"
-          />
-        </div>
-      </div>
-      <div
-        className="card-footer text-light bg-warning"
-      >
-        Sun Dec 17 2023 03:24:00 GMT+0530 (India Standard Time)
       </div>
     </div>
-  </div>
+  </section>
+  <footer
+    className="container-fluid footer-img rounded-2"
+  >
+    <div
+      className="text-center footer-fontsize-mobile"
+    >
+      © 2023 Copyright:
+      <span
+        className="text-reset fw-bold"
+      >
+         Learning App
+      </span>
+    </div>
+  </footer>
 </div>
 `;

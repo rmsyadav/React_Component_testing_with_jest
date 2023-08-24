@@ -1,10 +1,11 @@
 import {NavLink} from 'react-router-dom';
+import "../../Stylesheet/Navbar.css"
 
 const Navbar = ()=>{
 
     return(
     <>
-        <nav className="navbar navbar-expand-lg navbar-warning bg-warning">
+        <nav className="navbar navbar-expand-lg navbar-warning navbar-img rounded-3">
             <div className="container-fluid">
                 <a
                 href="https://reactjs.org"
@@ -13,7 +14,7 @@ const Navbar = ()=>{
                 className='text-primary fw-bold'
                 style={{textDecoration:"none"}}
               >
-                <i className="bi bi-windows"></i><strong>Learn React</strong>
+                <i className="bi bi-windows"></i>&nbsp;<strong>Learn React</strong>
               </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -28,6 +29,12 @@ const Navbar = ()=>{
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link fw-bold" to={"/signin"} data-testid="signin"><i className="bi bi-box-arrow-in-right"></i>SignIn</NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link fw-bold" to={"/signup"} data-testid="signup"><i className="bi bi-r-circle"></i>Sign Up</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <i className="bi bi-person-circle nav-link fw-bold"></i>
                     </li>
                 </ul>
                 </div>

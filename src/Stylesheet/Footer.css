@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.footer-img{
+    background-image: url('../Assets/17994.png');
+}
+
+@media only screen and (max-width:700px){
+    .footer-fontsize-mobile{
+        
+        padding-bottom: 30px;
+    }
+    
+}

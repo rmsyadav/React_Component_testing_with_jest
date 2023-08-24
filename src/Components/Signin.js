@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 //import customApi from "../customFetchApi/fetchApi";
 import { useState } from "react";
 import axios from "axios";
+import Footer from "./CommonComponents/Footer";
 
 const SignIn = ()=>{
     const [isSuccessLogin,setIsSuccessLogin] = useState();
@@ -37,9 +38,9 @@ const SignIn = ()=>{
    }
     return(
     <>
-    <section className="h-50 gradient-form">
-        <div className="container py-5 h-50" style={{width:"100%"}}>
-            <div className="row d-flex justify-content-center align-items-center h-100">
+    <section className="container gradient-form rounded-3" style={{backgroundImage: "url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp')"}}>
+        <div className="container py-5">
+            <div className="row d-flex justify-content-center align-items-center">
             <div className="col-xl-10">
                 <div className="card rounded-3 text-black">
                 <div className="row g-0">
@@ -56,30 +57,23 @@ const SignIn = ()=>{
                         <div className="text-center">
                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                             style={{width: "185px"}} alt="logo"/>
-                        <h4 className="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                        <h4 className="mt-1 mb-5 pb-1 clipImage">We are The Lotus Team</h4>
                         </div>
 
                         <form onSubmit={formik.handleSubmit}>
-                        <p>Please login to your account</p>
+                        <h5 className="clipImage2 my-3">Please login to your account</h5>
 
-                        <div className="form-outline mb-4">
-                            <input
-                            type="email" 
-                            id="email" 
-                            data-testid="email"
-                            name="email"
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.email}
-                            className="form-control"
-                            placeholder="email address" 
+                        <div className="form-outline mb-4 input-group">
+                        <span className="btn btn-outline-secondary form-field-mandatory-icon"><i className="bi bi-envelope-at-fill"></i></span> 
+                            <input type="email" id="email" data-testid="email" name="email" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} className="form-control form-control-md" placeholder="email address" 
                             />
                             {formik.touched.email && formik.errors.email ? (
                                 <label className="form-check-label ms-2 text-danger" htmlFor="femaleGender">{formik.errors.email}</label>
                             ) : null}
                         </div>
 
-                        <div className="form-outline mb-4">
+                        <div className="form-outline mb-4 input-group">
+                        <span className="btn btn-outline-secondary form-field-mandatory-icon"><i className="bi bi-shield-lock-fill"></i></span> 
                             <input 
                             type="password" 
                             id="password"
@@ -88,7 +82,7 @@ const SignIn = ()=>{
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                             value={formik.values.password}
-                            className="form-control" 
+                            className="form-control form-control-md" 
                             placeholder="Password"
                             />
                             {formik.touched.password && formik.errors.password ? (
@@ -123,6 +117,7 @@ const SignIn = ()=>{
             </div>
         </div>
     </section>
+    <Footer></Footer>
     </>)
 }
 

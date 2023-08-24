@@ -52,6 +52,18 @@ describe("App component testing:- ",()=>{
         expect(signin).toBeInTheDocument();
         
       });
+      test('checking wether redirecting on signup component', async() => {
+        const user = userEvent.setup()
+        render(<BrowserRouter><MyRoutes></MyRoutes></BrowserRouter>);
+        const linkElement = screen.getByTestId('signup');
+        expect(linkElement).toBeInTheDocument();
+        await act(async()=>{
+          await user.click(linkElement);
+        })
+        const signin= screen.getByText(/Create an account/i);
+        expect(signin).toBeInTheDocument();
+        
+      });
     
   
   })

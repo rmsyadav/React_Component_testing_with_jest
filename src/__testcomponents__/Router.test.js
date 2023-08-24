@@ -31,4 +31,22 @@ describe("Routing testing of components",()=>{
       const list= screen.getByText("Numbered List Group");
       expect(list).toBeInTheDocument();
     });
+    it("Route testing for signin component",()=>{
+        render(
+            <MemoryRouter initialEntries={['/signin']}>
+               <MyRoutes></MyRoutes>
+            </MemoryRouter>
+          );
+      const list= screen.getByText("Please login to your account");
+      expect(list).toBeInTheDocument();
+    });
+    it("Route testing for signup component",()=>{
+        render(
+            <MemoryRouter initialEntries={['/signup']}>
+               <MyRoutes></MyRoutes>
+            </MemoryRouter>
+          );
+      const list= screen.getByText("Create an account");
+      expect(list).toBeInTheDocument();
+    });
 })
