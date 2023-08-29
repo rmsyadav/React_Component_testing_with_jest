@@ -113,6 +113,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
           >
             <i
               className="bi bi-person-circle nav-link fw-bold"
+              title="Ramashankar Kumar"
             />
           </li>
         </ul>
@@ -150,7 +151,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
             className="card-body"
             style={
               Object {
-                "height": "400px",
+                "minHeight": "400px",
               }
             }
           >

@@ -112,6 +112,7 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
         >
           <i
             className="bi bi-person-circle nav-link fw-bold"
+            title="Ramashankar Kumar"
           />
         </li>
       </ul>

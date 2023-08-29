@@ -33,7 +33,7 @@ Array [
             className="card-body"
             style={
               Object {
-                "height": "400px",
+                "minHeight": "400px",
               }
             }
           >

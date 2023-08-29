@@ -40,13 +40,13 @@ describe("Routing testing of components",()=>{
       const list= screen.getByText("Please login to your account");
       expect(list).toBeInTheDocument();
     });
-    it("Route testing for signup component",()=>{
+    it("Route testing for signup component",async()=>{
         render(
             <MemoryRouter initialEntries={['/signup']}>
                <MyRoutes></MyRoutes>
             </MemoryRouter>
           );
-      const list= screen.getByText("Create an account");
+      const list= await screen.findByText("Create an account");
       expect(list).toBeInTheDocument();
     });
 })

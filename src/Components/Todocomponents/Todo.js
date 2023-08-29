@@ -48,7 +48,7 @@ const Todo = ()=>{
                     <div className="card-header bg-success text-dark fw-bold">
                         Todo App
                     </div>
-                    <div className="card-body" style={{height:"400px"}}>
+                    <div className="card-body" style={{minHeight:"400px"}}>
                         {todoWaring && <div className="alert alert-warning card-title" data-testid="todoError">
                         <strong>Warning!</strong> Please type something in TodoBox field.
                         </div>}

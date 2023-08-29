@@ -34,7 +34,7 @@ const Navbar = ()=>{
                       <NavLink className="nav-link fw-bold" to={"/signup"} data-testid="signup"><i className="bi bi-r-circle"></i>Sign Up</NavLink>
                     </li>
                     <li className="nav-item">
-                        <i className="bi bi-person-circle nav-link fw-bold"></i>
+                        <i title="Ramashankar Kumar" className="bi bi-person-circle nav-link fw-bold" ></i>
                     </li>
                 </ul>
                 </div>
