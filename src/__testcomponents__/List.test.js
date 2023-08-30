@@ -3,6 +3,8 @@
 import { render, screen ,act} from '@testing-library/react';
 import { setupServer } from 'msw/node';
 import List from '../Components/Todocomponents/List';
+import { Provider } from 'react-redux';
+import store from '../StateContainer/Store';
 const mockTasks = {
   comments:[
     {
@@ -45,7 +47,7 @@ describe('Component: TaskList', () => {
     
     it('List component snapshot testing ',()=>{
 
-      const list = renderer.create(<List></List>).toJSON();
+      const list = renderer.create(<Provider store={store}><List></List></Provider>).toJSON();
       expect(list).toMatchSnapshot();
     })
 
@@ -53,7 +55,7 @@ describe('Component: TaskList', () => {
       
       
       await act(()=>{
-        render(<List></List>);
+        render(<Provider store={store}><List></List></Provider>);
       })
       const displayedTasks = await screen.findAllByTestId("list-group-item");
       expect(displayedTasks).toHaveLength(2);

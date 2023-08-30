@@ -1,7 +1,9 @@
-import {render,screen} from "@testing-library/react";
+import {render,screen, waitForElementToBeRemoved} from "@testing-library/react";
 import renderer from 'react-test-renderer';
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import MyRoutes from "../Components/RoutesComponents/Router";
+import { Provider } from "react-redux";
+import store from "../StateContainer/Store";
 
 describe("Routing testing of components",()=>{
     
@@ -24,12 +26,16 @@ describe("Routing testing of components",()=>{
 
     it("Particular route testing",()=>{
         render(
+            <Provider store={store}>
             <MemoryRouter initialEntries={['/list']}>
                <MyRoutes></MyRoutes>
             </MemoryRouter>
+            </Provider> 
           );
-      const list= screen.getByText("Numbered List Group");
-      expect(list).toBeInTheDocument();
+      waitForElementToBeRemoved(screen.queryByRole("status"),async()=>{
+        const list= screen.getByText("Numbered List Group");
+        expect(list).toBeInTheDocument();
+      }); 
     });
     it("Route testing for signin component",()=>{
         render(

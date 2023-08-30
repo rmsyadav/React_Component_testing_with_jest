@@ -3,7 +3,6 @@ import Navbar from './Navbar';
 import List from "../Todocomponents/List";
 import Todo from "../Todocomponents/Todo";
 import SignIn from '../Signin';
-import Signup1 from '../Signup';
 import React, { Suspense } from 'react';
 const Signup = React.lazy(()=>import("../Signup"))
 const MyRoutes = ()=>{
