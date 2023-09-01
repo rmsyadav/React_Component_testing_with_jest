@@ -27,7 +27,7 @@ Array [
           <div
             className="card-header bg-success text-dark fw-bold"
           >
-            Todo App
+            USER COMMENTS
           </div>
           <div
             className="card-body"
@@ -43,7 +43,7 @@ Array [
               <input
                 className="form-control"
                 onChange={[Function]}
-                placeholder="Add your new todo"
+                placeholder="Please type your comment!"
                 type="text"
                 value=""
               />

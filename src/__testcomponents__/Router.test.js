@@ -20,7 +20,7 @@ describe("Routing testing of components",()=>{
                <MyRoutes></MyRoutes>
             </MemoryRouter>
           );
-      const todo= screen.getByText(/Todo App/i);
+      const todo= screen.getByText(/USER COMMENTS/i);
       expect(todo).toBeInTheDocument();
     });
 
@@ -33,7 +33,7 @@ describe("Routing testing of components",()=>{
             </Provider> 
           );
       waitForElementToBeRemoved(screen.queryByRole("status"),async()=>{
-        const list= screen.getByText("Numbered List Group");
+        const list= screen.getByText("USER COMMENTS");
         expect(list).toBeInTheDocument();
       }); 
     });

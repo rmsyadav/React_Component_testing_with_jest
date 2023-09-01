@@ -2,7 +2,6 @@
     width: 50%;
     padding-right: 0 !important;
     padding-left: 0 !important;
-   
     margin-right: auto;
     margin-left: auto;
 }
@@ -20,7 +19,9 @@
     background-color: chartreuse;
 }
 .hoverEffect:hover{
-    background-color:rgb(94, 97, 101);
+    background-color:white;
+    border-width: 1px solid black;
+    border-radius: 25%;
 }
 
 .column-list-text span{

@@ -51,7 +51,7 @@ exports[`App component testing:-  Navbar component snapshot testing  1`] = `
         >
           <a
             aria-current="page"
-            className="nav-link active fw-bold active"
+            className="nav-link fw-bold active"
             data-testid="home"
             href="/"
             onClick={[Function]}

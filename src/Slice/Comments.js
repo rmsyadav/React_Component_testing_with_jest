@@ -29,7 +29,6 @@ const fetchComments = createAsyncThunk(
             state.isLoading = true;
         })
       }
-  });
-const {setComments} = commentsSlice.actions;  
-export {fetchComments,setComments}
+  }); 
+export {fetchComments}
 export default commentsSlice.reducer;

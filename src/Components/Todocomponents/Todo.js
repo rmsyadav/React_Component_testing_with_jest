@@ -46,14 +46,14 @@ const Todo = ()=>{
             <div className="col-xl-8" style={{marginTop:"30px"}}>
                 <div className="card text-center">
                     <div className="card-header bg-success text-dark fw-bold">
-                        Todo App
+                    USER COMMENTS
                     </div>
                     <div className="card-body" style={{minHeight:"400px"}}>
                         {todoWaring && <div className="alert alert-warning card-title" data-testid="todoError">
                         <strong>Warning!</strong> Please type something in TodoBox field.
                         </div>}
                         <div className="input-group card-title mb-3">
-                            <input type="text" className="form-control" placeholder="Add your new todo" value={todoText} onChange={AddTodoText}/>
+                            <input type="text" className="form-control" placeholder="Please type your comment!" value={todoText} onChange={AddTodoText}/>
                             <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addNewTodo}><i className="bi bi-plus-circle-fill" style={{color: "blue"}}></i></button>
                         </div>
                         <div className="card-text">

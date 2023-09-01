@@ -24,7 +24,7 @@ describe("App component testing:- ",()=>{
       await act(async()=>{
         await user.click(screen.getByTestId('home'));
       })
-      const list= screen.getByText(/Todo App/i);
+      const list= screen.getByText(/USER COMMENTS/i);
       expect(list).toBeInTheDocument();
       
     });
@@ -38,7 +38,7 @@ describe("App component testing:- ",()=>{
           await user.click(screen.getByTestId('list'));
          })
         waitForElementToBeRemoved(screen.queryByRole("status"),async()=>{
-          const list= await screen.findByText(/Numbered List Group/i);
+          const list= await screen.findByText(/USER COMMENTS/i);
           expect(list).toBeInTheDocument();
         }); 
       });

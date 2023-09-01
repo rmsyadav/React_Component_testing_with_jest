@@ -52,7 +52,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
           >
             <a
               aria-current="page"
-              className="nav-link active fw-bold active"
+              className="nav-link fw-bold active"
               data-testid="home"
               href="/"
               onClick={[Function]}
@@ -145,7 +145,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
           <div
             className="card-header bg-success text-dark fw-bold"
           >
-            Todo App
+            USER COMMENTS
           </div>
           <div
             className="card-body"
@@ -161,7 +161,7 @@ exports[`App component testing:-  List component snapshot testing  1`] = `
               <input
                 className="form-control"
                 onChange={[Function]}
-                placeholder="Add your new todo"
+                placeholder="Please type your comment!"
                 type="text"
                 value=""
               />
