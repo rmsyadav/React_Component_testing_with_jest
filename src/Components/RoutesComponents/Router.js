@@ -4,6 +4,7 @@ import List from "../Todocomponents/List";
 import Todo from "../Todocomponents/Todo";
 import SignIn from '../Signin';
 import React, { Suspense } from 'react';
+import Feedback from '../Feedback';
 const Signup = React.lazy(()=>import("../Signup"))
 const MyRoutes = ()=>{
 
@@ -17,7 +18,7 @@ const MyRoutes = ()=>{
           <Route exact path="/list" element={<List></List>}></Route>
           <Route exact path="/signin" element={<SignIn></SignIn>}></Route>
           <Route exact path="/signup" element={<Signup></Signup>}></Route>
-         
+      
       </Routes>
       </Suspense>
         

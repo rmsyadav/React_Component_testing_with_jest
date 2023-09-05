@@ -22,12 +22,12 @@ const SignIn = ()=>{
                 password:values.password
             }
           const response = await axios.post('/shopping/api/v1/login',userDeatils);
-          if(response && response.data && response.data.statusCode === 200 && response.data.statusMessage === "success!" )
+          if(response.data.statusCode === 200 && response.data.statusMessage === "success!" )
           {
             setIsSuccessLogin("success")
             navigate('/');
           }
-          else{
+          else if(response.data.statusCode === 403 || response.data.statusMessage === "error!"){
             setIsSuccessLogin("error")
           }
         },

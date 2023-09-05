@@ -39,7 +39,6 @@ const List =()=> {
    }
 
   const sortingBySelectedOption = (selectedOption)=>{
-    
     switch(selectedOption){
         case "USERNAME":
             const tempMap1 = sortByUsername({comments:storeState.comments});
@@ -59,11 +58,17 @@ const List =()=> {
             break;
         default:
             setComments(storeState.comments);   
-     } 
+     }
+     
   } 
   const filterBySelectedOption = (event)=>{
      event.preventDefault();
-     switch(filterOption){
+     filterTheCommentsByOptions(filterOption); 
+       
+  }
+ const filterTheCommentsByOptions =()=>{
+    
+    switch(filterOption){
         case "USERNAME":
             const tempMap1 = filterByUsername({filterText:filterText,comments:storeState.comments});
             setComments(tempMap1);
@@ -82,9 +87,9 @@ const List =()=> {
             break;
         default:
             setComments(storeState.comments);   
-     }  
-       
-  }
+     } 
+ }
+
   return (
    <>
         {storeState.isLoading ? 

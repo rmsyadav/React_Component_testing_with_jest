@@ -55,6 +55,8 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
+    "@stryker-mutator/core": "^7.1.1",
+    "@stryker-mutator/jest-runner": "^7.1.1",
     "babel-jest": "^29.6.2",
     "jest": "^27.5.1",
     "react-test-renderer": "^18.2.0"

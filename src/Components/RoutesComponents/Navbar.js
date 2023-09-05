@@ -34,6 +34,9 @@ const Navbar = ()=>{
                       <NavLink className="nav-link fw-bold" to={"/signup"} data-testid="signup"><i className="bi bi-r-circle"></i>Sign Up</NavLink>
                     </li>
                     <li className="nav-item">
+                      <NavLink className="nav-link fw-bold" to={"/feedback"} data-testid="feefback"><i className="bi bi-r-circle"></i>feedback</NavLink>
+                    </li>
+                    <li className="nav-item">
                         <i title="Ramashankar Kumar" className="bi bi-person-circle nav-link fw-bold" ></i>
                     </li>
                 </ul>
